@@ -3,7 +3,7 @@ import BannerSlider, { BannerSliderProps } from '.'
 
 const items = [
   {
-    img: '/img/random-img-1.jpg',
+    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
     title: 'Defy death 1',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',
@@ -11,14 +11,14 @@ const items = [
     ribbon: 'Bestselling'
   },
   {
-    img: '/img/random-img-2.jpg',
+    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
     title: 'Defy death 2',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death'
   },
   {
-    img: '/img/random-img-3.jpg',
+    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
     title: 'Defy death 3',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',

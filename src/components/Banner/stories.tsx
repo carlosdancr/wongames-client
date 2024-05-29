@@ -10,7 +10,7 @@ export default {
     }
   },
   args: {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+    img: '/img/random-img-1.jpg',
     title: 'Defy death',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     buttonLabel: 'Buy now',

@@ -10,7 +10,7 @@ describe('<Menu />', () => {
     expect(screen.getByLabelText(/Open Menu/i)).toBeInTheDocument()
     expect(screen.getByRole('img', { name: /Won Games/i })).toBeInTheDocument()
     expect(screen.getByLabelText(/Search/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/Open Shopping Cart/i)).toBeInTheDocument()
+    expect(screen.getAllByLabelText(/shopping cart/i)).toHaveLength(2)
   })
 
   it('should handle the open/close mobile menu', () => {
@@ -33,7 +33,7 @@ describe('<Menu />', () => {
   it('should show register box when logged out', () => {
     renderWithTheme(<Menu />)
 
-    expect(screen.queryByText(/My account/i)).not.toBeInTheDocument()
+    expect(screen.queryByText(/My profile/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/Wishlist/i)).not.toBeInTheDocument()
     expect(screen.getByText(/Log in now/i)).toBeInTheDocument()
     expect(screen.getByText(/Sign Up/i)).toBeInTheDocument()
@@ -42,8 +42,8 @@ describe('<Menu />', () => {
   it('should show account and wishlist when logged in', () => {
     renderWithTheme(<Menu username="carlosdancr" />)
 
-    expect(screen.getByText(/My account/i)).toBeInTheDocument()
-    expect(screen.getByText(/Wishlist/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/my profile/i)).toHaveLength(2)
+    expect(screen.getAllByText(/wishlist/i)).toHaveLength(2)
     expect(screen.queryByText(/Log in now/i)).not.toBeInTheDocument()
     expect(screen.queryByText(/Sign Up/i)).not.toBeInTheDocument()
   })
